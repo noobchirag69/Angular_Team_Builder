@@ -1,0 +1,11 @@
+.team-container {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.team-container ul {
+  background-color: bisque;
+  box-shadow: 0 3px 10px rgba(100, 100, 100, 0.6);
+  margin: 0.5rem 0;
+  padding: 10px 15px;
+}

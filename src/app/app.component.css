@@ -1,0 +1,68 @@
+.container {
+  padding: 30px;
+  max-width: 400px;
+  background-color: bisque;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.6);
+  margin: 0 10px;
+}
+
+h1 {
+  text-shadow: 0 2px 2px #777;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.list {
+  padding: 20px;
+  height: 150px;
+  overflow: auto;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+}
+
+.add-members-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-members-container input {
+  padding: 7px 10px;
+}
+
+.add-members-container button {
+  border: none;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: rgb(0, 53, 139);
+  margin-top: 0.5rem;
+  padding: 7px;
+}
+
+.input-container {
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  height: 2rem;
+}
+
+.input-container button {
+  width: 100%;
+  background-color: darkcyan;
+  border: none;
+  color: white;
+}
+
+.input-container input {
+  padding: 0 10px;
+  width: 100%;
+}
+
+.error-msg {
+  color: red;
+}
+
+.teams-container {
+  margin: 30px auto;
+}
