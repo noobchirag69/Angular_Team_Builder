@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
   members: string[] = [];
-  newMemberText = '';
+  newMemberText = "";
   teams: string[][] = [];
-  numberOfTeams: '' | number = '';
-  errorMessage = '';
+  numberOfTeams: "" | number = "";
+  errorMessage = "";
 
   onInput(value: string) {
     this.newMemberText = value;
@@ -22,25 +22,35 @@ export class AppComponent {
 
   onClick() {
     if (!this.newMemberText.length) {
-      this.errorMessage = "Name can't be empty";
+      this.errorMessage = "Name can't be empty!";
       return;
     }
 
-    this.errorMessage = '';
+    this.errorMessage = "";
     this.members.push(this.newMemberText);
-    this.newMemberText = '';
+    this.newMemberText = "";
   }
 
   generateTeams() {
     this.teams = [];
+    if (!this.members.length) {
+      this.errorMessage = "Please enter the names first!";
+      return;
+    }
+    this.errorMessage = '';
     const allMembers = [...this.members];
 
-    if (this.members.length < this.numberOfTeams) {
-      this.errorMessage = 'Not enough members';
+    if (!this.numberOfTeams) {
+      this.errorMessage = "Enter the number of teams!";
       return;
     }
 
-    this.errorMessage = '';
+    if (this.members.length < this.numberOfTeams) {
+      this.errorMessage = "Not enough members!";
+      return;
+    }
+
+    this.errorMessage = "";
 
     while (allMembers.length) {
       for (let i = 0; i < this.numberOfTeams; i++) {
@@ -55,6 +65,6 @@ export class AppComponent {
     }
 
     this.members = [];
-    this.numberOfTeams = '';
+    this.numberOfTeams = "";
   }
 }

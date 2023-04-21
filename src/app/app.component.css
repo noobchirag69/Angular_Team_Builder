@@ -1,13 +1,21 @@
 .container {
-  padding: 30px;
+  padding: 50px;
   max-width: 400px;
-  background-color: bisque;
-  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.6);
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.7);
+  border-radius: 20px;
   margin: 0 10px;
+  background-color: #fff;
 }
 
 h1 {
   text-shadow: 0 2px 2px #777;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.error-msg {
+  color: red;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -17,7 +25,8 @@ h1 {
   height: 150px;
   overflow: auto;
   margin-bottom: 0.5rem;
-  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 .add-members-container {
@@ -59,10 +68,14 @@ h1 {
   width: 100%;
 }
 
-.error-msg {
-  color: red;
-}
-
 .teams-container {
   margin: 30px 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    padding: 10px;
+    box-shadow: none;
+    margin: 0 10px;
+  }
 }

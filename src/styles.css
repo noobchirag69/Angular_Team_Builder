@@ -1,12 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Droid Sans Mono', monospace;
+  font-family: "Russo One", sans-serif;
 }
 
 body {
-  background: linear-gradient(to right, rgb(255, 143, 143), rgb(255, 255, 141));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,11 +21,12 @@ li {
 }
 
 input {
-  border: none;
-  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
   cursor: pointer;
   font-size: 0.9rem;
+  border-radius: 5px;
 }
